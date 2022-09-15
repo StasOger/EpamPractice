@@ -2,6 +2,8 @@ package chapter2_2_Algorithmization.topic1_arrays;
 import java.util.Arrays;
 
 public class Task6 {
+    // 6. Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых
+    // являются простыми числами.
 
         public static void main(String[] args) {
             int[] intArray = {1, 2, 3, 4, 5, 7, 10, 21, 25, 26, 26, 37, 37, 48, 57};

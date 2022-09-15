@@ -1,6 +1,12 @@
 package chapter2_2_Algorithmization.topic4_decompositionWithPodprogram;
 import java.util.Scanner;
 
+/*
+ * Написать метод(методы) для нахождения наибольшего общего делителя и
+ * наименьшего общего кратного двух натуральных чисел:
+ * НОК(А,В) = A*B / НОД(A,B)
+ */
+
 public class Task1 {
 
         private static int mostCommonMultiple(int x, int y) {

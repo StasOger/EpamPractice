@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
+//
+//Даны натуральные числа К и N. Написать метод(методы) формирования массива А,
+//        элементами которого являются числа, сумма цифр которых равна К и которые не большее N.
 
 public class Task12 {
         public static void main(String[] args) {

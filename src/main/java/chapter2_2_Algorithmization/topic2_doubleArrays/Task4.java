@@ -3,6 +3,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//Сформировать квадратную матрицу порядка n по заданному образцу(n - четное);
+
 public class Task4 {
 
         public static void main(String[] args) {

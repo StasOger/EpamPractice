@@ -2,6 +2,9 @@ package chapter2_2_Algorithmization.topic2_doubleArrays;
 import java.util.Random;
 import java.util.Scanner;
 
+
+//11. Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.
+
 public class Task1 {
 
 

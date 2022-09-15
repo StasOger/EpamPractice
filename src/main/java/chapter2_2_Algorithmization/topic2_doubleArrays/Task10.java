@@ -1,6 +1,12 @@
 package chapter2_2_Algorithmization.topic2_doubleArrays;
 import java.util.Random;
 
+/*
+        Задана матрица неотрицательных чисел.
+        Посчитать сумму элементов в каждом столбце.
+        Определить, какой столбец содержит максимальную сумму.
+*/
+
 public class Task10 {
         public static void main(String[] args) {
             int[][] array = new int[10][10];

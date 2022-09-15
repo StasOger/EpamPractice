@@ -1,6 +1,7 @@
 package chapter1_Basics_of_software_code_development.topic2_branching;
 import java.util.Scanner;
-
+//  1. Даны два угла треугольника (в градусах).
+//  Определить, существует ли такой треугольник, и если да, то будет ли он прямоугольным.
 public class Task1 {
         public static void main(String[] args) {
 

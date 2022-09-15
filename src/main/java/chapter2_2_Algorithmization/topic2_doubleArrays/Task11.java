@@ -1,6 +1,13 @@
 package chapter2_2_Algorithmization.topic2_doubleArrays;
 import java.util.Random;
 
+/*
+        Rus:
+        Матрицу 10x20 заполнить случайными числами от 0 до 15.
+        Вывести на экран саму матрицу и номера строк, в
+        которых число 5 встречается три и более раз
+ */
+
 public class Task11 {
         public static void main(String[] args) {
             int[][] array = new int[10][20];

@@ -3,6 +3,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+ *  Сформировать квадратную матрицу порядка N по правилу:
+ *  A[I,J] = sin((I^2 - J^2) / N)
+ *  и подсчитать количество положительных элементов в ней.
+ */
+
 public class Task7 {
         public static void main(String[] args) {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {

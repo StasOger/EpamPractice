@@ -7,11 +7,13 @@ import java.util.Scanner;
 
 public class Task10 {
         public static void main(String[] args) {
-
+//
+//            Дано натуральное число N. Написать метод(методы) для формирования массива,
+//            элементами которого являются цифры числа N
 
             try (BufferedReader read = new BufferedReader(new InputStreamReader(System.in))) {
 
-                System.out.println("Введите два числа: ");
+                System.out.println("Введите N: ");
                 Scanner sc = new Scanner(System.in);
                 int x = Integer.valueOf(sc.nextLine());
                 System.out.println("Number: " + x);

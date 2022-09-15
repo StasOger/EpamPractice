@@ -3,6 +3,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//Написать метод(методы), проверяющий, являются ли данные три числа взаимно простыми.
+
 public class Task5 {
         public static void main(String[] args) {
 

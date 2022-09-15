@@ -1,6 +1,8 @@
 package chapter2_2_Algorithmization.topic2_doubleArrays;
 import java.util.Random;
 
+//Найдите наибольший элемент матрицы и заменить все нечетные элементы на него.
+
 public class Task15 {
         public static void main(String[] args) {
             Integer[][] array = new Integer[][] {

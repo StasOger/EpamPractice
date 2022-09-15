@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
+//Написать программу, определяющую сумму n - значных чисел, содержащих только
+//        нечетные цифры. Определить также, сколько четных цифр в найденной сумме. Для
+//        решения задачи использовать декомпозицию.
+
 public class Task16 {
 
         public static void main(String[] args) {

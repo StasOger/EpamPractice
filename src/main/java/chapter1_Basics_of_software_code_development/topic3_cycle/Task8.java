@@ -1,5 +1,6 @@
 package chapter1_Basics_of_software_code_development.topic3_cycle;
 import java.util.Scanner;
+// 8. Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
 
 public class Task8 {
         public static void main(String[] args) {

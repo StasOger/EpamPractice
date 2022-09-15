@@ -1,6 +1,7 @@
 package chapter2_2_Algorithmization.topic1_arrays;
 import java.util.Scanner;
 public class Task5 {
+    //5. Даны целые числа а 1 ,а 2 ,..., а n . Вывести на печать только те числа, для которых а i > i.
 
         public static void main(String[] args) {
             Scanner input = new Scanner(System.in); // Объявляем Scanner

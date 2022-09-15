@@ -1,6 +1,10 @@
 package chapter1_Basics_of_software_code_development.topic2_branching;
 import java.util.Scanner;
 
+// 4. Заданы размеры А, В прямоугольного отверстия и размеры х, у, z кирпича.
+// Определить, пройдет ли кирпич через отверстие.
+
+
 public class Task4 {
         public static void main(String[] args) {
 

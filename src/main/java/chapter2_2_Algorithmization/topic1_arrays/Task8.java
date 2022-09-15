@@ -1,6 +1,11 @@
 package chapter2_2_Algorithmization.topic1_arrays;
 import java.util.Arrays;
 
+/*
+        Дана последовательность целых чисел a 1 , a 2 ,  , a n . Образовать новую последовательность, выбросив из
+        исходной те члены, которые равны min( a 1 , a 2 ,  , a n ) .
+*/
+
 public class Task8 {
         public static void main(String[] args) {
             int[] arr = {1,2,3,4,5,6,7,8,9,10};

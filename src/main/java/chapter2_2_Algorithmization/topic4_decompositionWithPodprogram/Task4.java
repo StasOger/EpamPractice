@@ -1,6 +1,10 @@
 package chapter2_2_Algorithmization.topic4_decompositionWithPodprogram;
 import java.util.Random;
 import java.util.Scanner;
+//
+//          На плоскости заданы своими координатами n точек.
+//        Написать метод(методы), определяющие, между какими из пар точек
+//        самое большое расстояние. Указание. Координаты точек занести в массив.
 
 public class Task4 {
         public static void main(String[] args) {

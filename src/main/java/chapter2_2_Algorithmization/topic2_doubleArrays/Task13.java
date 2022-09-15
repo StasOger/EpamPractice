@@ -3,6 +3,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+        Отсортировать столбцы матрицы по возрастанию и убыванию значений элементов.
+*/
+
 public class Task13 {
     public static void main(String[] args) {
 

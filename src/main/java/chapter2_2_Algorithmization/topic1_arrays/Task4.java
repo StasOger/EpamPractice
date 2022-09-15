@@ -1,5 +1,5 @@
 package chapter2_2_Algorithmization.topic1_arrays;
-
+// 4. Даны действительные числа а 1 ,а 2 ,..., а n . Поменять местами наибольший и наименьший элементы
 public class Task4 {
 
         public static void main(String[] args) {

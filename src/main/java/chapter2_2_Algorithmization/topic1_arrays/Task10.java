@@ -2,6 +2,11 @@ package chapter2_2_Algorithmization.topic1_arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+/*  10.  Дан  целочисленный  массив  с  количеством  элементов  п.
+    Сжать  массив,  выбросив  из  него  каждый  второй элемент (освободившиеся элементы заполнить нулями)
+    Примечание. Дополнительный массив не использовать.
+*/
+
 public class Task10 {
         public static void main(String[] args) {
             Random rand = new Random();

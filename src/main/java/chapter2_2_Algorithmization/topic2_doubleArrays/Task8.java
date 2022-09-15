@@ -2,6 +2,13 @@ package chapter2_2_Algorithmization.topic2_doubleArrays;
 import java.util.Random;
 import java.util.Scanner;
 
+/*
+        В числовой матрице поменять местами два столбца любых столбца,
+        т. е. все элементы одного столбца поставить на соответствующие
+        им позиции другого, а его элементы второго переместить в первый.
+        Номера столбцов вводит пользователь с клавиатуры.
+*/
+
 public class Task8 {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);

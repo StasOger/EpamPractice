@@ -1,6 +1,10 @@
 package chapter2_2_Algorithmization.topic2_doubleArrays;
 
 public class Task2 {
+
+//    Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали.
+
+
         public static void main(String[] args) {
             String[][] arr = new String[21][21];
             for (int i = 0; i < arr.length; i++) {

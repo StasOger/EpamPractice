@@ -3,6 +3,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//Даны две последовательности a1<=a2<=a3<=aN и b1<=b2<=b3<=bM. Образовать из них новую последовательность
+//        чисел так, чтобы она тоже была неубывающей. Примечание. Дополнительный массив не использовать.
+
 public class Task2 {
         public static void main(String[] args) {
             try (BufferedReader read = new BufferedReader(new InputStreamReader(System.in))) {

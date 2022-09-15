@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
+//
+//Найти все натуральные n-значные числа, цифры в которых образуют строго
+//        возрастающую последовательность (например, 1234, 5789). Для решения задачи
+//        использовать декомпозицию.
 
 public class Task15 {
         public static void main(String[] args) {

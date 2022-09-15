@@ -1,6 +1,9 @@
 package chapter2_2_Algorithmization.topic2_doubleArrays;
 import java.util.Random;
 
+//Сформировать случайную матрицу m x n, состоящую из нулей и единиц,
+//        причем в каждом столбце число единиц равно номеру столбца.
+
 public class Task14 {
         public static void main(String[] args) {
             Random rnd = new Random();

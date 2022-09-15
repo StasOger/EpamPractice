@@ -2,6 +2,12 @@ package chapter2_2_Algorithmization.topic2_doubleArrays;
 import java.util.Random;
 import java.util.Scanner;
 
+/*
+        Задана матрица неотрицательных чисел.
+        Посчитать сумму элементов в каждом столбце.
+        Определить, какой столбец содержит максимальную сумму.
+*/
+
 public class Task9 {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);

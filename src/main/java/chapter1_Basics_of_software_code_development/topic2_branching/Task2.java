@@ -1,6 +1,6 @@
 package chapter1_Basics_of_software_code_development.topic2_branching;
 import java.util.Scanner;
-
+// 2. Найти max{min(a, b), min(c, d)}
 public class Task2 {
         public static void main(String[] args) {
 

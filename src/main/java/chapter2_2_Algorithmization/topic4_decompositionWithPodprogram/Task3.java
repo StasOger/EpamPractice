@@ -1,5 +1,8 @@
 package chapter2_2_Algorithmization.topic4_decompositionWithPodprogram;
 import java.util.Scanner;
+//
+// Вычислить  площадь  правильного  шестиугольника  со  стороной  а,
+//         используя  метод  вычисления  площади треугольника.
 
 public class Task3 {
         private static double square(double b) {

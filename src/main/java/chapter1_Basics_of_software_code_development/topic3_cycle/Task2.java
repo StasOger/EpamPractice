@@ -1,6 +1,7 @@
 package chapter1_Basics_of_software_code_development.topic3_cycle;
 
 import java.util.Scanner;
+//  2. Вычислить значения функции на отрезке [а,b] c шагом h:
 
 public class Task2 {
     public static void main(String[] args) {

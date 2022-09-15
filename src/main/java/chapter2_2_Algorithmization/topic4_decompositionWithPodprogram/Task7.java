@@ -1,5 +1,7 @@
 package chapter2_2_Algorithmization.topic4_decompositionWithPodprogram;
 
+//Написать метод(методы) для вычисления суммы факториалов всех нечетных чисел от 1 до 9.
+
 public class Task7 {
         private static double fuctorial() {
             int fuck;

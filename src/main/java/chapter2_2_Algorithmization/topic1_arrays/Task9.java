@@ -3,6 +3,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+ 9. В массиве целых чисел с количеством элементов n найти наиболее часто встречающееся
+    число. Если таких чисел несколько, то определить наименьшее из них.
+
+*/
+
 public class Task9 {
 
         public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package chapter2_2_Algorithmization.topic1_arrays;
 import java.util.Scanner;
+//    Дан  массив  действительных  чисел,  размерность  которого  N.  Подсчитать,  сколько  в  нем  отрицательных,
+//     положительных и нулевых элементов.
 
 public class Task3 {
         public static void main(String[] args) {

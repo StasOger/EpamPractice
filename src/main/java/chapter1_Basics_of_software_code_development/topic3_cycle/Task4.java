@@ -1,4 +1,6 @@
 package chapter1_Basics_of_software_code_development.topic3_cycle;
+// 4. Составить программу нахождения произведения квадратов первых двухсот чисел.
+
 
 public class Task4 {
         public static void main(String[] args) {

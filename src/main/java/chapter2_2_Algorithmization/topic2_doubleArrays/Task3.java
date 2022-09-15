@@ -1,6 +1,8 @@
 package chapter2_2_Algorithmization.topic2_doubleArrays;
 import java.util.Scanner;
 
+//Дана матрица. Вывести k-ю строку и p-й столбец матрицы
+
 public class Task3 {
         public static void main(String[] args) {
             Scanner scan = new Scanner(System.in);
