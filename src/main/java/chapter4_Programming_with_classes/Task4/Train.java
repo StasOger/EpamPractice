@@ -1,16 +1,14 @@
 package chapter4_Programming_with_classes.Task4;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Train implements Comparable<Train> {
+public class Train{
 
     private long numberOfTrain;
 
-    private static String finishPoint;
+    private String finishPoint;
 
     private Date st;
-
 
     public Train(long numberOfTrain, String finishPoint, Date st) {
         this.numberOfTrain = numberOfTrain;
@@ -26,7 +24,7 @@ public class Train implements Comparable<Train> {
         this.numberOfTrain = numberOfTrain;
     }
 
-    public static String getFinishPoint() {
+    public String getFinishPoint() {
         return finishPoint;
     }
 
@@ -42,7 +40,6 @@ public class Train implements Comparable<Train> {
         this.st = st;
     }
 
-
     @Override
     public String toString() {
         return "Train{" +
@@ -51,17 +48,4 @@ public class Train implements Comparable<Train> {
                 ", st=" + st +
                 '}';
     }
-
-    @Override
-    public int compareTo(Train o) {
-
-//        if (){
-            return (int) (this.getNumberOfTrain() - o.getNumberOfTrain());
-//        } else {
-//            return getFinishPoint().compareTo(Train.getFinishPoint());
-//        }
-    }
-
-
-
 }

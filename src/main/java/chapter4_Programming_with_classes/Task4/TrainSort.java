@@ -57,8 +57,8 @@ public class TrainSort {
         trains[1] = new Train(44, "Las Venturas", startTime.parse("12:10"));
         trains[2] = new Train(1, "San Fierro", startTime.parse("06:20"));
         trains[3] = new Train(7, "Los Santos", startTime.parse("10:00"));
-        trains[4] = new Train(77, "Las Venturas", startTime.parse("12:10"));
-        trains[5] = new Train(88, "San Fierro", startTime.parse("06:20"));
+        trains[4] = new Train(77, "Las Venturas", startTime.parse("12:50"));
+        trains[5] = new Train(88, "San Fierro", startTime.parse("10:20"));
         trains[6] = new Train(100, "Paris", startTime.parse("12:00"));
         trains[7] = new Train(41, "Moskow", startTime.parse("12:10"));
         trains[8] = new Train(69, "San Antonsk", startTime.parse("06:20"));
@@ -71,17 +71,17 @@ public class TrainSort {
         }
 
         makeTextOperation(trainsList);
-
-
     }
 
     private static void sortTrainsByNumber(List<Train> trainsList) {
-        Collections.sort(trainsList);
+        trainsList.sort(COMPARE_BY_NUMBER);
 
         for(Train temp: trainsList){
             System.out.println("Number of train: "+ temp.getNumberOfTrain() + ", time of start: " + temp.getSt() + ", finish point: " + temp.getFinishPoint());
         }
     }
+
+    private static final Comparator<Train> COMPARE_BY_NUMBER = (train1, train2) -> (int) (train1.getNumberOfTrain()-train2.getNumberOfTrain());
 
     private static void showInformationAboutTrain(List<Train> trainsList) {
         System.out.println("Input number of train: ");
@@ -98,10 +98,12 @@ public class TrainSort {
     }
 
     private static void sortTrainsByFinishPoint(List<Train> trainsList) {
-        Collections.sort(trainsList);
+        trainsList.sort(COMPARE_BY_FINISH_POINT_OR_ST);
 
         for(Train temp: trainsList){
-            System.out.println(Train.getFinishPoint() + " : " + Train.getFinishPoint());
+            System.out.println("Number of train: "+ temp.getNumberOfTrain() + ", time of start: " + temp.getSt() + ", finish point: " + temp.getFinishPoint());
         }
     }
+    private static final Comparator<Train> COMPARE_BY_FINISH_POINT_OR_ST = Comparator.comparing(Train::getFinishPoint) .thenComparing(Train::getSt);
+
 }
