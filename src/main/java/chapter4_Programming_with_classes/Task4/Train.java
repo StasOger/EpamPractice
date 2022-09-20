@@ -1,14 +1,16 @@
 package chapter4_Programming_with_classes.Task4;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Train{
+public class Train {
 
     private long numberOfTrain;
 
     private String finishPoint;
 
     private Date st;
+
 
     public Train(long numberOfTrain, String finishPoint, Date st) {
         this.numberOfTrain = numberOfTrain;
@@ -39,6 +41,7 @@ public class Train{
     public void setSt(Date st) {
         this.st = st;
     }
+
 
     @Override
     public String toString() {
