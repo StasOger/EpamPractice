@@ -8,8 +8,6 @@ public class DateTime {
     private int seconds;
 
     public int getHours() {
-        if (hours > 24 || minutes < 0)
-            hours = 0;
         return hours;
     }
 
@@ -18,8 +16,6 @@ public class DateTime {
     }
 
     public int getMinutes() {
-        if (minutes > 60 || minutes < 0)
-            minutes = 0;
         return minutes;
     }
 
@@ -28,8 +24,6 @@ public class DateTime {
     }
 
     public int getSeconds() {
-        if (seconds > 60 || seconds < 0)
-            seconds = 0;
         return seconds;
     }
 

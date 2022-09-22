@@ -46,9 +46,12 @@ public class Task6 {
 
     private static void makeOperationWithTime(DateTime dateTime) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String start = "- Enter \"1\" for input time; \n" +
-                "- Enter \"2\" for change default time;\n" +
-                "- Enter \"3\" for change default time;\n" +
+        String start = "- Enter \"1\" for change hours;\n" +
+                "- Enter \"2\" for change minutes;\n" +
+                "- Enter \"3\" for change seconds;\n" +
+                "- Enter \"4\" for enter the value to which you want to change the hours;\n" +
+                "- Enter \"5\" enter the value to which you want to change the minutes;\n" +
+                "- Enter \"6\" enter the value to which you want to change the seconds;\n" +
                 "for end enter \"exit\"\n";
         System.out.println(start);
         String choice = "";
@@ -68,6 +71,18 @@ public class Task6 {
                     changeSeconds(dateTime);
                     System.out.println(dateTime.getHours() + ":" + dateTime.getMinutes() + ":" + dateTime.getSeconds());
                     break;
+                case "4":
+                    changeHoursTo(dateTime);
+                    System.out.println(dateTime.getHours() + ":" + dateTime.getMinutes() + ":" + dateTime.getSeconds());
+                    break;
+                case "5":
+                    changeMinutesTo(dateTime);
+                    System.out.println(dateTime.getHours() + ":" + dateTime.getMinutes() + ":" + dateTime.getSeconds());
+                    break;
+                case "6":
+                    changeSecondsTo(dateTime);
+                    System.out.println(dateTime.getHours() + ":" + dateTime.getMinutes() + ":" + dateTime.getSeconds());
+                    break;
                 case "exit":
                     System.out.println("\nOver.");
                     break;
@@ -78,20 +93,41 @@ public class Task6 {
     }
 
     private static int changeHours(DateTime dateTime) {
+        System.out.println("enter the new value hours");
         int h = scan.nextInt();
         dateTime.setHours(h);
         return h;
     }
 
     private static int changeMinutes(DateTime dateTime) {
+        System.out.println("enter the new value minutes");
         int m = scan.nextInt();
         dateTime.setMinutes(m);
         return m;
     }
 
     private static int changeSeconds(DateTime dateTime) {
+        System.out.println("enter the new value seconds");
         int s = scan.nextInt();
         dateTime.setSeconds(s);
         return s;
+    }
+
+    private static void changeHoursTo(DateTime dateTime) {
+        System.out.println("enter the value to which you want to change the hours");
+        int h = scan.nextInt();
+        dateTime.setHours(dateTime.getHours()+h);
+    }
+
+    private static void changeMinutesTo(DateTime dateTime) {
+        System.out.println("enter the value to which you want to change the minutes");
+        int m = scan.nextInt();
+        dateTime.setMinutes(dateTime.getMinutes()+m);
+    }
+
+    private static void changeSecondsTo(DateTime dateTime) {
+        System.out.println("enter the value to which you want to change the seconds");
+        int s = scan.nextInt();
+        dateTime.setSeconds(dateTime.getSeconds()+s);
     }
 }
