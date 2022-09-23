@@ -1,4 +1,4 @@
-package chapter4_Programming_with_classes;
+package chapter4_Programming_with_classes.Example4;
 
 public class Car implements Comparable<Car> {
 
