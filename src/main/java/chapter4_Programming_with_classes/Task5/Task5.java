@@ -8,6 +8,7 @@ public class Task5 {
     public static String choice = "";
 
     public static void main(String[] args) throws Exception {
+
         Count count1 = new Count(5, 10, 6);
         int count2min = (int) (0 + Math.random()*15);
         int count2max = count2min + 7;
@@ -15,8 +16,11 @@ public class Task5 {
         Count count2 = new Count(count2min,count2max,count2current);
 
         makeRandomOrDefault(count1, count2);
+
     }
 
+
+//    TODO COUNT1,COUNT2 -> COUNT
     private static Count makeRandomOrDefault(Count count1, Count count2) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String start = "- Enter \"1\" for initialization of the counter with random values; \n" +
@@ -29,10 +33,10 @@ public class Task5 {
             choice = reader.readLine();
             switch (choice) {
                 case "1":
-                    initializRandom(count2);
+                    countRandom(count2);
                     break;
                 case "2":
-                    initializDefault(count1);
+                    countDefault(count1);
                     break;
                 case "exit":
                     System.out.println("\nOver.");
@@ -44,7 +48,7 @@ public class Task5 {
         return null;
     }
 
-    private static Count initializDefault(Count count1) throws IOException {
+    private static Count countDefault(Count count) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String start = "- Enter \"1\" for increment value; \n" +
                 "- Enter \"2\" for decrement value;\n" +
@@ -56,12 +60,12 @@ public class Task5 {
             choice = reader.readLine();
             switch (choice) {
                 case "1":
-                    count1.increment();
-                    System.out.println("count1 = " + count1.value());
+                    count.increment();
+                    System.out.println("count = " + count.value());
                     break;
                 case "2":
-                    count1.decrement();
-                    System.out.println("count1 = " + count1.value());
+                    count.decrement();
+                    System.out.println("count = " + count.value());
                     break;
                 case "exit":
                     System.out.println("\nOver.");
@@ -73,7 +77,7 @@ public class Task5 {
         return null;
     }
 
-    private static Count initializRandom(Count count2) throws IOException {
+    private static Count countRandom(Count count) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String start = "- Enter \"1\" for increment value; \n" +
                 "- Enter \"2\" for decrement value;\n" +
@@ -85,12 +89,12 @@ public class Task5 {
             choice = reader.readLine();
             switch (choice) {
                 case "1":
-                    count2.increment();
-                    System.out.println("count2 = " + count2.value());
+                    count.increment();
+                    System.out.println("count = " + count.value());
                     break;
                 case "2":
-                    count2.decrement();
-                    System.out.println("count2 = " + count2.value());
+                    count.decrement();
+                    System.out.println("count = " + count.value());
                     break;
                 case "exit":
                     System.out.println("\nOver.");

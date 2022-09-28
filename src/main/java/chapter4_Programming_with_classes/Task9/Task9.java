@@ -24,13 +24,13 @@ public class Task9 {
             choice = reader.readLine();
             switch (choice) {
                 case "1":
-//                    sortCustomersByName(bookList);
+                    findBookByAutors(bookList);
                     break;
                 case "2":
-                    sortBooksByPublishHouse(bookList);
+                    findBooksByPublishHouse(bookList);
                     break;
                 case "3":
-                    sortBooksByPublishYear(bookList);
+                    findBooksBeforePublishYear(bookList);
                     break;
                 case "exit":
                     System.out.println("\nOver.");
@@ -42,17 +42,19 @@ public class Task9 {
     }
 
     public static void main(String[] args) throws Exception {
-        Book[] book = new Book[2];
+        Book[] book = new Book[3];
 
         List<Book> bookList = new ArrayList<>();
-        List<String> autors = new ArrayList<>();
+        List<String> autors0 = new ArrayList<>();
+        List<String> autors1 = new ArrayList<>();
+        List<String> autors2 = new ArrayList<>();
 
         String[] autor0 = new String[2];
         autor0[0] = "Chuk Polanik";
         autor0[1] = "Kvintin Tarantino";
 
         for (int i = 0; i<autor0.length; i++){
-            autors.add(autor0[i]);
+            autors0.add(autor0[i]);
         }
 
         String[] autor1 = new String[2];
@@ -60,12 +62,17 @@ public class Task9 {
         autor1[1] = "Kvintin Tarantino";
 
         for (int i = 0; i<autor1.length; i++){
-            autors.add(autor1[i]);
+            autors1.add(autor1[i]);
         }
 
-        book[0] = new Book(1, "Fight Club", autors, "Rolling", 1999, 369, 299,"HZ"
+        String autor2 = "Dmitry Dostoevsky";
+        autors2.add(autor2);
+
+        book[0] = new Book(1, "Fight Club", autors0, "Rolling Stones", 1999, 369, 299,"HZ"
                 );
-        book[1] = new Book(2, "1984", autors, "Breaken News", 1984, 369, 199,"HZ"
+        book[1] = new Book(2, "1984", autors1, "Breaken News", 1984, 369, 199,"HZ"
+        );
+        book[2] = new Book(3, "Prestuplenie i nakazanie", autors2, "Breaken News", 1799, 600, 199,"HZ"
         );
 
         for (int i = 0; i<book.length; i++){
@@ -75,33 +82,43 @@ public class Task9 {
         makeTextOperation(bookList);
     }
 
-    private static void sortBooksByPublishYear(List<Book> bookList) {
-        bookList.sort(COMPARE_BY_PUBLISH_YEAR);
+    private static void findBookByAutors(List<Book> bookList) {
+//        Scanner in = new Scanner(System.in);
+//        System.out.print("Input autor: ");
+//
+//        String inputAutors = in.nextLine();
+//
+//        for(Book temp: bookList){
+//            for (int i=0; i<)
+//            if (temp.getAutors().equals(inputAutors)){
+//                System.out.println("Books name: "+ temp.getName() + ", autors: " + temp.getAutors() +", year of publish: " + temp.getYearOfPublish() + ", publishing house: " + temp.getPublishingHouse());
+//            }
+//        }
+    }
 
+    private static void findBooksBeforePublishYear(List<Book> bookList) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input publishing year: ");
+
+        int inputPublishingYear = in.nextInt();
         for(Book temp: bookList){
-            System.out.println("Books name: "+ temp.getName() + ", autors: " + temp.getAutors() +", year of publish: " + temp.getYearOfPublish() + ", publishing house: " + temp.getPublishingHouse());
+            if (temp.getYearOfPublish() > inputPublishingYear){
+                System.out.println("Books name: "+ temp.getName() + ", autors: " + temp.getAutors() +", year of publish: " + temp.getYearOfPublish() + ", publishing house: " + temp.getPublishingHouse());
+
+            }
         }
     }
 
-    private static final Comparator<Book> COMPARE_BY_PUBLISH_YEAR = Comparator.comparing(Book::getYearOfPublish);
+    private static void findBooksByPublishHouse(List<Book> bookList) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input input publishing house: ");
 
-    private static void sortBooksByPublishHouse(List<Book> bookList) {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            System.out.print("Input input publishing house: ");
+        String inputPublishingHouse = in.nextLine();
 
-            String inputPublishingHouse = reader.readLine();
-            Optional<Book> selectedBook = bookList.stream().filter(book -> book.getPublishingHouse() == inputPublishingHouse).findFirst();
-            if (selectedBook.isPresent()){
-                System.out.println(selectedBook.get());
-                for(Book temp: bookList){
-                    System.out.println("Books name: " + temp.getName() + ", autors: " + temp.getAutors() + ", year of publish: " + temp.getYearOfPublish() + ", publishing house: " + temp.getPublishingHouse());
-                }
-            } else {
-                System.out.println("not found");
+        for(Book temp: bookList){
+            if (temp.getPublishingHouse().equals(inputPublishingHouse)){
+                System.out.println("Books name: "+ temp.getName() + ", autors: " + temp.getAutors() +", year of publish: " + temp.getYearOfPublish() + ", publishing house: " + temp.getPublishingHouse());
             }
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }

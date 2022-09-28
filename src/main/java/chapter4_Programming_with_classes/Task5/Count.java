@@ -1,27 +1,29 @@
 package chapter4_Programming_with_classes.Task5;
 
-class Count {
-    private int min,max,current;
+public class Count {
 
-    public Count(int min_, int max_, int current_){
-        min = min_;
-        max = max_;
-        current = current_;
+    private int max;
+    private int min;
+    private int current;
+
+    public Count(int min, int max, int current){
+        this.min = min;
+        this.max = max;
+        this.current = current;
 
         if (max < min) {
-            int tmp = max;
-            max = min;
-            min = tmp;
+            this.max = min;
+            this.min = max;
         }
 
         if (current < min)
-            current = min;
+            this.current = min;
         if (current > max)
-            current = max;
+            this.current = max;
     }
 
-    public Count(int min_, int max_) {
-        this(min_, max_, min_);
+    public Count(int min, int max) {
+        this(min, max, min);
         current = min;
     }
 

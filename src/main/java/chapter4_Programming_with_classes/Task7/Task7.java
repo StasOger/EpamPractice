@@ -18,14 +18,21 @@ public class Task7 {
 
         findPerimetr(x1,x2,x3,y1,y2,y3);
 
-        final Mediana v1 = new Mediana(1.0D, 1.0D);
-        final Mediana v2 = new Mediana(2.0D, 4.0D);
-        final Mediana v3 = new Mediana(3.0D, 2.0D);
+        findPointOfMedianIntersection(x1,x2,x3,y1,y2,y3);
 
-        final double m2 = (v1.getX() + v2.getX() + v3.getX()) / 3.0D;
-        final double m3 = (v1.getY() + v2.getY() + v3.getY()) / 3.0D;
+    }
 
-        System.out.println("Точка пересечения медиан: (" + m2 + ", " + m3 + ")");
+    private static void findPointOfMedianIntersection(int x1, int x2, int x3, int y1, int y2, int y3) {
+//        представим что треугольник ABC, найдем середины BC. Точка M пресечения медиан делит её (медиану) в отношении 1:2
+
+        double xA1 = (x2+x3)/2;
+        double yA1 = (y2+y3)/2;
+
+        double xM = (1*x1+2*xA1)/3;
+        double yM = (1*y1+2*yA1)/3;
+
+        System.out.println("Point of median intersection" + "[ " + xM + ", " + yM + " ]");
+
     }
 
     private static double findPerimetr (int x1, int y1,int x2,int y2,int x3,int y3){
