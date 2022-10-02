@@ -11,7 +11,7 @@ public class Task9 {
 
     public static String choice = "";
 
-    private static void makeTextOperation(List<Book> bookList) throws IOException {
+    private static void makeTextOperation(BrunchBook brunch) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String start = "- Enter \"1\" for get list of books by a given autor; \n" +
                 "- Enter \"2\" for get list of books by a given publishing house;\n" +
@@ -24,13 +24,13 @@ public class Task9 {
             choice = reader.readLine();
             switch (choice) {
                 case "1":
-                    findBookByAutors(bookList);
+                    findBookByAutors(brunch.getBooks());
                     break;
                 case "2":
-                    findBooksByPublishHouse(bookList);
+                    findBooksByPublishHouse(brunch.getBooks());
                     break;
                 case "3":
-                    findBooksBeforePublishYear(bookList);
+                    findBooksBeforePublishYear(brunch.getBooks());
                     break;
                 case "exit":
                     System.out.println("\nOver.");
@@ -42,9 +42,7 @@ public class Task9 {
     }
 
     public static void main(String[] args) throws Exception {
-        Book[] book = new Book[3];
 
-        List<Book> bookList = new ArrayList<>();
         List<String> autors0 = new ArrayList<>();
         List<String> autors1 = new ArrayList<>();
         List<String> autors2 = new ArrayList<>();
@@ -68,18 +66,24 @@ public class Task9 {
         String autor2 = "Dmitry Dostoevsky";
         autors2.add(autor2);
 
-        book[0] = new Book(1, "Fight Club", autors0, "Rolling Stones", 1999, 369, 299,"HZ"
-                );
-        book[1] = new Book(2, "1984", autors1, "Breaken News", 1984, 369, 199,"HZ"
-        );
-        book[2] = new Book(3, "Prestuplenie i nakazanie", autors2, "Breaken News", 1799, 600, 199,"HZ"
-        );
+        BrunchBook brunchBook = new BrunchBook(111, Arrays.asList(
+                new Book(1, "Fight Club", autors0, "Rolling Stones", 1999, 369, 299,"HZ"),
+                new Book(2, "1984", autors1, "Breaken News", 1984, 369, 199,"HZ"),
+                new Book(3, "Prestuplenie i nakazanie", autors2, "Breaken News", 1799, 600, 199,"HZ")
+        ));
 
-        for (int i = 0; i<book.length; i++){
-            bookList.add(book[i]);
-        }
+//        book[0] = new Book(1, "Fight Club", autors0, "Rolling Stones", 1999, 369, 299,"HZ"
+//                );
+//        book[1] = new Book(2, "1984", autors1, "Breaken News", 1984, 369, 199,"HZ"
+//        );
+//        book[2] = new Book(3, "Prestuplenie i nakazanie", autors2, "Breaken News", 1799, 600, 199,"HZ"
+//        );
+//
+//        for (int i = 0; i<book.length; i++){
+//            bookList.add(book[i]);
+//        }
 
-        makeTextOperation(bookList);
+        makeTextOperation(brunchBook);
     }
 
     private static void findBookByAutors(List<Book> bookList) {
