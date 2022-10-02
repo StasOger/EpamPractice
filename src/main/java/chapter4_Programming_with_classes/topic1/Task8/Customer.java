@@ -1,4 +1,4 @@
-package chapter4_Programming_with_classes.Task8;
+package chapter4_Programming_with_classes.topic1.Task8;
 
 public class Customer {
     private int id;

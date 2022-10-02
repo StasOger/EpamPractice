@@ -1,4 +1,4 @@
-package chapter4_Programming_with_classes.Task6;
+package chapter4_Programming_with_classes.topic1.Task6;
 
 import java.io.BufferedReader;
 import java.io.IOException;

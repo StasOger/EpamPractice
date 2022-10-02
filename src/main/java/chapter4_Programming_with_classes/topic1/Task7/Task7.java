@@ -1,6 +1,4 @@
-package chapter4_Programming_with_classes.Task7;
-
-import chapter4_Programming_with_classes.Task5.Count;
+package chapter4_Programming_with_classes.topic1.Task7;
 
 public class Task7 {
     public static void main(String[] args) throws Exception {

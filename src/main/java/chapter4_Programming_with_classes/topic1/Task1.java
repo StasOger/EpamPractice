@@ -1,4 +1,4 @@
-package chapter4_Programming_with_classes;
+package chapter4_Programming_with_classes.topic1;
 
 import java.util.Scanner;
 

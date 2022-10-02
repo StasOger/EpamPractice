@@ -1,7 +1,4 @@
-package chapter4_Programming_with_classes.Task10;
-
-import chapter4_Programming_with_classes.Task4.Train;
-import chapter4_Programming_with_classes.Task9.Book;
+package chapter4_Programming_with_classes.topic1.Task10;
 
 import java.io.BufferedReader;
 import java.io.IOException;

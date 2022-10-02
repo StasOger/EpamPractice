@@ -1,4 +1,4 @@
-package chapter4_Programming_with_classes;
+package chapter4_Programming_with_classes.topic1;
 
 public class Task2_Test2 {
         private int a;
