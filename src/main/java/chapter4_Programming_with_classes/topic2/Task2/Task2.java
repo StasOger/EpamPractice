@@ -17,8 +17,7 @@ public class Task2 {
 
     private static void makeCarOperation(Car car) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        System.out.println("Wheel is broke?");
+        int wheelBroken = (int) ( Math.random() * 2 );
 
         String start = "- What do you want? \n" +
                 "- Enter \"1\" for driving car; \n" +
@@ -28,6 +27,11 @@ public class Task2 {
 
         System.out.println(start);
         while (!choice.equalsIgnoreCase("exit")) {
+
+
+            if (wheelBroken > 0){
+                System.out.println("You need to change the wheel");
+            }
             System.out.println("Enter command: ");
             choice = reader.readLine();
             switch (choice) {
@@ -46,6 +50,9 @@ public class Task2 {
                 default:
                     System.out.println("Incorrect. Please repeat one more time.\n");
             }
+        }
+        if (wheelBroken > 0){
+            System.out.println("Wheel is OK");
         }
     }
 
