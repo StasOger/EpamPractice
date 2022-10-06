@@ -19,6 +19,8 @@ public class Car {
         System.out.println("Wheel changed");
     }
 
+    void showInformationAboutCar() {System.out.println("BMW");}
+
     public Car(Wheel wheel, Engine engine) {
         this.wheel = wheel;
         this.engine = engine;

@@ -1,21 +1,16 @@
 package chapter4_Programming_with_classes.topic2.Task2;
 
-import chapter4_Programming_with_classes.topic2.Task1.Sentence;
-import chapter4_Programming_with_classes.topic2.Task1.Text;
-import chapter4_Programming_with_classes.topic2.Task1.Word;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
-import java.util.Scanner;
 
 public class Task2 {
     private static SimpleDateFormat startTime = new SimpleDateFormat("HH:mm");
 
     public static String choice = "";
 
-    private static void makeCarOperation(Car car) throws IOException {
+    private static void makeCarOperation(Car bmw) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int wheelBroken = (int) ( Math.random() * 2 );
 
@@ -23,6 +18,7 @@ public class Task2 {
                 "- Enter \"1\" for driving car; \n" +
                 "- Enter \"2\" for filling car;\n" +
                 "- Enter \"3\" for change wheel; \n" +
+                "- Enter \"4\" for show information about car; \n" +
                 "for end enter \"exit\"\n";
 
         System.out.println(start);
@@ -36,13 +32,16 @@ public class Task2 {
             choice = reader.readLine();
             switch (choice) {
                 case "1":
-                    car.drive();
+                    bmw.drive();
                     break;
                 case "2":
-                    car.refuel();
+                    bmw.refuel();
                     break;
                 case "3":
-                    car.changeWheel();
+                    bmw.changeWheel();
+                    break;
+                case "4":
+                    bmw.showInformationAboutCar();
                     break;
                 case "exit":
                     System.out.println("\nOver.");
