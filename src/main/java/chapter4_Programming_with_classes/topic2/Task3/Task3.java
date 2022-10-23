@@ -1,12 +1,15 @@
 package chapter4_Programming_with_classes.topic2.Task3;
 
-import chapter4_Programming_with_classes.topic1.Task4.Train;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+
+/*
+ * Создать объект класса Государство, используя классы Область, Район, Город.
+ * Методы: вывести на консоль столицу, количество областей, площадь, областные центры.
+ */
+
 
 public class Task3 {
     public static String choice = "";

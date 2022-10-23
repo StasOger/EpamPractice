@@ -6,14 +6,10 @@ package chapter4_Programming_with_classes.topic2.Task1;
  */
 
 
-import chapter4_Programming_with_classes.topic1.Task4.Train;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 //        Путь праведника труден, ибо препятствуют ему себялюбивые и тираны из злых людей.

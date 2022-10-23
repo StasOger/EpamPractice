@@ -2,6 +2,10 @@ package chapter4_Programming_with_classes.topic1;
 
 import java.util.Scanner;
 
+//          Создайте класс Test1 двумя переменными. Добавьте метод вывода на экран и методы изменения этих
+//        переменных. Добавьте метод, который находит сумму значений этих переменных, и метод, который находит
+//        наибольшее значение из этих двух переменных.
+
 public class Task1 {
 
         public static void main(String[] args) {

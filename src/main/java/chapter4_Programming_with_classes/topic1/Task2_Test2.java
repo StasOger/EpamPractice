@@ -1,5 +1,9 @@
 package chapter4_Programming_with_classes.topic1;
 
+//          Создйте  класс  Test2 c  двумя  переменными.  Добавьте  конструктор  с  входными  параметрами.  Добавьте
+//        конструктор, инициализирующий члены класса по умолчанию. Добавьте set- и get- методы для полей экземпляра
+//        класса.
+
 public class Task2_Test2 {
         private int a;
         private int b;
