@@ -1,0 +1,19 @@
+
+h
+java:S1104"RMake choice a static final constant or non-public and provide accessors if needed.(³ª¦—
+B
+java:S1444",Make this "public static choice" field final(³ª¦—
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(š®¯À
+;
+java:S2885"&Make "startTime" an instance variable.(œÄòm
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(÷ºâÿÿÿÿÿÿ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(£’Ÿšúÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(ÑÞ©µüÿÿÿÿ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(Š¶Úµüÿÿÿÿ
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(žïÛ—
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(ÕýŸé
+N	java:S106@"9Replace this use of System.out or System.err by a logger.(žïÛ—
+S	java:S106B"9Replace this use of System.out or System.err by a logger.(æ–ªÃÿÿÿÿÿ
+N	java:S106E"9Replace this use of System.out or System.err by a logger.(žïÛ—
+B
+java:S1068"-Remove this unused "startTime" private field.(œÄòm
