@@ -12,19 +12,17 @@ import java.util.*;
 public class СalendarAPP {
     public static void main(String[] args) throws ParseException, IOException {
 
-        List<CalendarMODEL> weekend = new ArrayList<>();
-        weekend.add(new CalendarMODEL(9,5));
-        weekend.add(new CalendarMODEL(1,1));
-        weekend.add(new CalendarMODEL(7,1));
+        List<CalendarMODEL> holiday = new ArrayList<>();
+        holiday.add(new CalendarMODEL(9,5));
+        holiday.add(new CalendarMODEL(1,1));
+        holiday.add(new CalendarMODEL(7,1));
 
         String choice = "";
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String start ="What type of trip do you want?\n" +
-                "- Enter \"1\" for select relax;\n" +
-                "- Enter \"2\" for select excursion;\n" +
-                "- Enter \"3\" for select therapy;\n" +
-                "- Enter \"4\" for select shopping;\n" +
-                "- Enter \"5\" for select cruise;\n" +
+                "- Enter \"1\" for verify The Weekends;\n" +
+                "- Enter \"2\" for verify The Holidays;\n" +
+                "- Enter \"3\" for showTheHoliday;\n" +
                 "for end enter \"exit\"\n";
 
         System.out.println(start);
@@ -33,13 +31,13 @@ public class СalendarAPP {
             choice = reader.readLine();
             switch (choice) {
                 case "1":
-                    showTheWeekends(weekend);
+                    verifyTheWeekends();
                     break;
                 case "2":
-                    showTheHolidays();
+                    verifyTheHolidays(holiday);
                     break;
                 case "3":
-                    verifyTheWeekends();
+                    showTheHoliday(holiday);
                     break;
                 case "exit":
                     System.out.println("\nOver.");
@@ -50,12 +48,25 @@ public class СalendarAPP {
         }
     }
 
-    private static void showTheWeekends(List<CalendarMODEL> weekend) {
-        System.out.println(weekend.toString());
+    private static void verifyTheHolidays(List<CalendarMODEL> holiday) {
+        Scanner in1 = new Scanner(System.in);
+
+        System.out.println("Input month");
+        int month = in1.nextInt();
+        System.out.println("Input day");
+        int day = in1.nextInt();
+
+        for (CalendarMODEL calendarMODEL : holiday) {
+            if (calendarMODEL.getDay() == day && calendarMODEL.getMonth() == month){
+                System.out.println("holiday");
+            } else {
+                System.out.println("Its not holiday");
+            }
+        }
     }
 
-    private static void showTheHolidays() {
-
+    private static void showTheHoliday(List<CalendarMODEL> holiday) {
+        System.out.println(holiday.toString());
     }
 
     private static void verifyTheWeekends() throws ParseException {
@@ -73,6 +84,8 @@ public class СalendarAPP {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(inputDate);
         String dayOfWeek = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US).toUpperCase();
-        System.out.println(dayOfWeek);
+        if (dayOfWeek.equals("SATURDAY") || dayOfWeek.equals("SUNDAY")){
+            System.out.println("It's a weekend ("+dayOfWeek+")");
+        }
     }
 }
