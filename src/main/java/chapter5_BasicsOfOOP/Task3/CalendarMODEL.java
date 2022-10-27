@@ -1,37 +1,50 @@
 package chapter5_BasicsOfOOP.Task3;
 
-public class Calendar {
-    private String day;
-    private String month;
-    private String year;
+public class CalendarMODEL {
+    private int day;
+    private int month;
+    private int year;
 
-    public String getDay() {
+    public int getDay() {
         return day;
     }
 
-    public void setDay(String day) {
+    public void setDay(int day) {
         this.day = day;
     }
 
-    public String getMonth() {
+    public int getMonth() {
         return month;
     }
 
-    public void setMonth(String month) {
+    public void setMonth(int month) {
         this.month = month;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
-    public Calendar(String day, String month, String year) {
+    public CalendarMODEL(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
+    }
+
+    public CalendarMODEL(int day, int month) {
+        this.day = day;
+        this.month = month;
+    }
+
+    @Override
+    public String toString() {
+        return "CalendarMODEL{" +
+                "day=" + day +
+                ", month=" + month +
+                '}';
     }
 }

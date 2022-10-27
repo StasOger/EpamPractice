@@ -12,7 +12,8 @@ public class Shop {
     public static void main(String[] args) throws IOException {
         List<Product> products = new ArrayList<>();
         List<Product> shoppingList = new ArrayList<>();
-        Payment balance = new Payment(1269);
+
+        int balance = 1256; //$ my money
 
         init(products);//create product list
         String choice = "";
@@ -40,10 +41,10 @@ public class Shop {
                     buyIWatch(products, shoppingList);
                     break;
                 case "4":
-                    basket(shoppingList, balance);
+                    basket(shoppingList);
                     break;
                 case "5":
-                    balance(balance);
+//                    balance();
                     break;
                 case "exit":
                     System.out.println("\nOver.");
@@ -154,27 +155,11 @@ public class Shop {
         }
     }
 
-    private static void basket(List<Product> shoppingList, Payment balance) {
+    private static void basket(List<Product> shoppingList) {
         int totalSum = 0; //summ of purchase
         for (Product product : shoppingList) {
             totalSum = totalSum + product.getPrice();
         }
         System.out.println("Total sum: " + totalSum);
-        System.out.println("Do you want to confirm the purchase?(y/n)");
-        Scanner in1 = new Scanner(System.in);
-        String confirm = in1.nextLine();
-
-        if ( confirm.equals("y")){
-            if (balance.getBalance() > totalSum){
-                balance.setBalance(balance.getBalance()-totalSum);
-                System.out.println("confirm! " + " balance = " + balance.getBalance() + ",  sum = " + totalSum);
-            } else {
-                System.out.println("dont confirm!  " + " balance = " + balance.getBalance() + ",  sum = " + totalSum);
-            }
-        }
-    }
-
-    private static void balance(Payment balance) {
-        System.out.println("balance = " + balance.getBalance());
     }
 }
