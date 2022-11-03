@@ -1,5 +1,7 @@
 package chapter5_BasicsOfOOP.Task4;
 
+import chapter4_Programming_with_classes.topic2.Task4.BankAccount;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -9,13 +11,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Scanner;
 
 public class dragonJewelsAPP {
 
     public static void main(String[] args) throws IOException {
-        Coin coin1 = new Coin("coin", "dhdhfd", 21, 21, "metall", "iamgay");
-        System.out.println(coin1.getTypeOfJewels() + coin1.getPrice() + "$");
 
         String choice = "";
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -42,10 +44,10 @@ public class dragonJewelsAPP {
                     showTheJewels();
                     break;
                 case "2":
-//                    showTheMostExpensiveJewels();
+                    showTheMostExpensiveJewels();
                     break;
                 case "3":
-//                    showJewelsForAgivenAmount();
+                    showJewelsForAgivenAmount();
                     break;
                 case "exit":
                     System.out.println("\nOver.");
@@ -63,6 +65,45 @@ public class dragonJewelsAPP {
             System.out.println(b);
         }
     }
+
+    private static void showTheMostExpensiveJewels() {
+        List<JewelModel> jewels = readJewelsFromCSV("src/main/resources/Jewels.csv");
+//        let's print all the person read from CSV file
+        int price = 0;
+        for (JewelModel b : jewels) {
+            if(b.getPrice()>price) {
+                price = b.getPrice();
+            }
+        }
+        for (JewelModel b : jewels) {
+            if(b.getPrice() == price) {
+                System.out.println(b);
+            }
+        }
+    }
+
+    private static void showJewelsForAgivenAmount() {
+        List<JewelModel> jewels = readJewelsFromCSV("src/main/resources/Jewels.csv");
+        List<JewelModel> jewelsSortedByPrice = new ArrayList<>();
+
+        System.out.println("Input min price: ");
+        Scanner in1 = new Scanner(System.in);
+        int minPrice = in1.nextInt();
+        System.out.println("Input max price: ");
+        int maxPrice = in1.nextInt();
+
+        for (JewelModel b : jewels) {
+            if(b.getPrice()>minPrice && b.getPrice()<maxPrice) {
+                jewelsSortedByPrice.add(b);
+            }
+        }
+        jewelsSortedByPrice.sort(COMPARE_BY_PRICE);
+        for (JewelModel b : jewelsSortedByPrice) {
+            System.out.println(b);
+        }
+    }
+
+    private static final Comparator<JewelModel> COMPARE_BY_PRICE = (jewel1, jewel2) -> jewel1.getPrice()-jewel2.getPrice();
 
     private static List<JewelModel> readJewelsFromCSV(String fileName) {
         List<JewelModel> jewels = new ArrayList<>();
@@ -102,4 +143,6 @@ public class dragonJewelsAPP {
         // create and return book of this metadata
         return new JewelModel(typeOfJewels, name, price, weight, material, comment);
     }
+
+
 }

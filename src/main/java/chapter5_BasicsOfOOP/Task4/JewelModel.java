@@ -71,8 +71,8 @@ public class JewelModel{
         return "JewelModel{" +
                 "typeOfJewels='" + typeOfJewels + '\'' +
                 ", name='" + name + '\'' +
-                ", price=" + price +
-                ", weight=" + weight +
+                ", price=$" + price +
+                ", weight=" + weight + "mm"+
                 ", material='" + material + '\'' +
                 ", comment='" + comment + '\'' +
                 '}';
